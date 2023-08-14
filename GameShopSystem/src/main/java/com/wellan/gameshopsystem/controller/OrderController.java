@@ -20,7 +20,7 @@ public class OrderController {
     @Autowired
     private OrderService orderService;
     //創建訂單
-    @PostMapping("/users/{userId}/createOrder")
+    @PostMapping("/users/{userId}/orders/createOrder")
     public ResponseEntity<OrderDetail> createOrder(@PathVariable Integer userId,
                                                    @RequestBody @Valid OrderAddRequest orderAddRequest){
         Integer orderId = orderService.createOrder(userId,orderAddRequest);
